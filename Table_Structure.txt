@@ -1,0 +1,86 @@
+MariaDB [book_it_up]> show tables;
++----------------------+
+| Tables_in_book_it_up |
++----------------------+
+| cart                 |
+| events               |
+| feedback             |
+| promo                |
+| purchase_history     |
+| registrations        |
++----------------------+
+6 rows in set (0.001 sec)
+
+MariaDB [book_it_up]> desc cart;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| cart_id  | int(10)      | NO   | PRI | NULL    | auto_increment |
+| event_id | int(12)      | YES  |     | NULL    |                |
+| uname    | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.020 sec)
+
+MariaDB [book_it_up]> desc feedback;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| feedback_id | int(12)      | NO   | PRI | NULL    | auto_increment |
+| fname       | varchar(255) | YES  |     | NULL    |                |
+| fmail       | varchar(255) | YES  |     | NULL    |                |
+| response    | varchar(255) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.001 sec)
+
+MariaDB [book_it_up]> desc promo;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| pid   | int(12)      | NO   | PRI | NULL    | auto_increment |
+| one   | varchar(255) | YES  |     | NULL    |                |
+| two   | varchar(255) | YES  |     | NULL    |                |
+| three | varchar(255) | YES  |     | NULL    |                |
+| four  | varchar(255) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+5 rows in set (0.001 sec)
+
+MariaDB [book_it_up]> desc purchase_history;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| purchase_id | int(12)      | NO   | PRI | NULL    | auto_increment |
+| ename       | varchar(255) | YES  |     | NULL    |                |
+| uname       | varchar(255) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.001 sec)
+
+MariaDB [book_it_up]> desc registrations;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| username | varchar(30)  | NO   |     | NULL    |       |
+| pass     | varchar(255) | NO   |     | NULL    |       |
+| uid      | varchar(100) | NO   | PRI | NULL    |       |
+| email    | varchar(255) | NO   |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+4 rows in set (0.001 sec)
+
+MariaDB [book_it_up]> desc events;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| event_id | int(12)      | NO   | PRI | NULL    | auto_increment |
+| ename    | varchar(255) | NO   |     | NULL    |                |
+| edetails | text         | NO   |     | NULL    |                |
+| lang     | varchar(50)  | NO   |     | NULL    |                |
+| egenre   | varchar(255) | YES  |     | NULL    |                |
+| eartists | varchar(255) | NO   |     | NULL    |                |
+| eloc     | varchar(255) | NO   |     | NULL    |                |
+| eage     | varchar(255) | YES  |     | NULL    |                |
+| epasses  | varchar(255) | YES  |     | NULL    |                |
+| eprice   | varchar(255) | YES  |     | NULL    |                |
+| edate    | varchar(255) | YES  |     | NULL    |                |
+| edur     | varchar(255) | NO   |     | NULL    |                |
+| eimg     | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+13 rows in set (0.001 sec)
