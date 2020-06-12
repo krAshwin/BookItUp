@@ -9,7 +9,6 @@ This is a ticket booking site for events hosted by admin.
 * Bootstrap Framework
 * MariaDB
 
-### Will be containerizing the project soon!
 
 ## Extra Help
 * **Table Structures : Table_Structure.txt**
